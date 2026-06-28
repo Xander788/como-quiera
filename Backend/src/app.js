@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import parqueoRoutes from "./routes/parqueo.routes.js";
+import otroRoutes from "./routes/otro.routes.js";
 dotenv.config();
 
 const app = express();
@@ -29,3 +30,4 @@ app.listen(PORT,()=>{
 
 
 app.use("/api/parqueo", parqueoRoutes);
+app.use("/api/otro", otroRoutes);
